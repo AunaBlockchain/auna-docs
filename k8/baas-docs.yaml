@@ -1,0 +1,59 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rtdappbaasdocs
+  namespace: auna-system
+  labels:
+    app: rtdappbaasdocs
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rtdappbaasdocs
+  template:
+    metadata:
+      labels:
+        app: rtdappbaasdocs
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: rtdappbaasdocs
+        imagePullPolicy: Always
+        image: registry.bcs.cl/auna/auna-docs:latest
+        ports:
+        - containerPort: 80
+      # nodeName: bcsblock-d02
+      restartPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: rtdservicebaasdocs
+  namespace: auna-system
+  labels:
+    app: rtdservicebaasdocs
+spec:
+  ports:
+  - name: rtdservicebaasdocs
+    port: 80
+    targetPort: 80
+  selector:
+    app: rtdappbaasdocs
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+  name: rtdingressbaasdocs
+  namespace: auna-system
+spec:
+  rules:
+  - host: k8qadocs.bcs.cl
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: rtdservicebaasdocs
+          servicePort: 80

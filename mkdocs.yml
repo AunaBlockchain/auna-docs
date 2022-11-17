@@ -1,0 +1,53 @@
+# Site Name
+site_name: Auna Docs
+# site_description:
+
+# Serving Address IP/Port
+dev_addr: '127.0.0.1:8080'
+
+# ReadTheDocs clone theme
+theme:
+  name: null
+  highlightjs: true
+  hljs_languages:
+    - yaml
+  custom_dir: 'theme/'
+
+#Navigation layout
+nav:
+  - Introducción: 'index.md'
+  - Construir apps: 'build_apps/build_apps.md'
+  - 'AUNA SDK': 'auna-sdk/herramientas-sdk.md'
+  - 'Herramientas del SDK':
+      - 'Cliente Simple Fabric': 'auna-sdk/herramientas/cliente-simple-fabric.md'
+      - 'Cliente Cache Simple': 'auna-sdk/herramientas/cliente-cache-simple.md'
+      - 'Smartcontract Runtimes': 'auna-sdk/herramientas/smartcontract-runtimes.md'
+      - 'Cliente API SmartContracts': 'auna-sdk/herramientas/cliente-api-smartcontracts.md'
+      - 'Conectores de Blockchain': 'auna-sdk/herramientas/conectores-blockchain.md'
+      - 'Auna Packer': 'auna-sdk/herramientas/packer.md'
+      - 'Programador de tareas': 'auna-sdk/herramientas/programador-tareas.md'
+      - 'Librería de servicios':
+          - 'Servicio de Caché de Datos': 'auna-sdk/herramientas/librerias-servicios/servicio-cache-datos.md'
+          - 'Servicio de Administración de Reportes': 'auna-sdk/herramientas/librerias-servicios/servicio-admin-reportes.md'
+          - 'Servicio de Visualización de Reportes': 'auna-sdk/herramientas/librerias-servicios/servicio-visualizacion-reportes.md'
+          - 'Servicio de Correo': 'auna-sdk/herramientas/librerias-servicios/servicio-correo.md'
+          - 'Servicio para Conexión a Interfaces Externas': 'auna-sdk/herramientas/librerias-servicios/servicio-conexion-interfaces-externas.md'
+      - 'Sistema de alertas':
+          - 'Alertas para tareas programadas': 'auna-sdk/herramientas/alertas-tareas-programadas.md'
+      - 'Librerías de Smartcontracts':
+          - 'Golang (Go)': 'auna-sdk/herramientas/librerias-smartcontracts-go.md'
+      - 'Servicios mockup':
+          - 'Servicio mockup de Reportes': 'auna-sdk/herramientas/servicios-mockup/mockup-reportes.md'
+          - 'Servicio mockup de templates para reportes': 'auna-sdk/herramientas/servicios-mockup/mockup-template-reportes.md'
+          - 'Servicio mockup para la generación de un reporte': 'auna-sdk/herramientas/servicios-mockup/mockup-generacion-reporte.md'
+          - 'Servicios mockup de Correos': 'auna-sdk/herramientas/servicios-mockup/mockup-correos.md'
+          - 'Servicio mockup de templates para correos': 'auna-sdk/herramientas/servicios-mockup/mockup-template-correos.md'
+          - 'Servicio mockup para el envío de correos': 'auna-sdk/herramientas/servicios-mockup/mockup-envio-correros.md'
+  - Dashboards Grafana:
+    - 'Dahsboards Entregados por AUNA': 'dashboards/auna-dashboard.md'
+    - 'Importar Dashboards': 'dashboards/importar-dashboard.md'
+  - Cuenta:
+    - 'Mi informacion': 'account/mi_info.md'
+    - 'Mi equipo': 'account/team_info.md'
+
+
