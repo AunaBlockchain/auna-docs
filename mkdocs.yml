@@ -46,6 +46,7 @@ nav:
   - Dashboards Grafana:
     - 'Dahsboards Entregados por AUNA': 'dashboards/auna-dashboard.md'
     - 'Importar Dashboards': 'dashboards/importar-dashboard.md'
+  - Estado de Servicios: 'backstage/estadoservicios.md'
   - Cuenta:
     - 'Mi informacion': 'account/mi_info.md'
     - 'Mi equipo': 'account/team_info.md'
